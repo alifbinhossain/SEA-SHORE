@@ -1,0 +1,100 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 10px 20px rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+  }
+  &--black {
+    color: $color-white;
+    background-color: $color-black;
+    padding: 1.8rem 3.5rem;
+    letter-spacing: 1px;
+
+    &::after {
+      background-color: $color-black;
+    }
+  }
+
+  &--white {
+    color: $color-grey-dark;
+    background-color: $color-white;
+    padding: 1.8rem 3.5rem;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &--blue {
+    color: $color-white;
+    background-color: $primary-color-blue;
+    padding: 1.8rem 3.5rem;
+    letter-spacing: 1px;
+
+    &::after {
+      background-color: $primary-color-blue;
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom 0.7s ease-in 0.5s;
+    animation-fill-mode: backwards;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &-text {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.4rem;
+      font-weight: 500;
+      padding: 6px 4px;
+      color: $primary-color-blue;
+      border-bottom: 1px solid $primary-color-blue;
+    }
+
+    &:hover {
+      color: $color-white;
+      background-image: linear-gradient(
+        to right,
+        $secondary-color-skyblue-dark,
+        $primary-color-blue
+      );
+    }
+  }
+}

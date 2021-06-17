@@ -1,0 +1,185 @@
+.card {
+  // FUNCTIONALLITY
+  perspective: 150rem;
+  height: 50rem;
+  position: relative;
+  color: $color-black;
+
+  &__side {
+    height: 50rem;
+    position: absolute;
+    font-size: 3rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.15);
+    border-radius: 3px;
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      background-color: darkred;
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $deep-sea-gre-light,
+          $deep-sea-gre-dark
+        );
+      }
+
+      &-2 {
+        background-image: linear-gradient(
+          to right bottom,
+          $pancho-gre-light,
+          $pancho-gre-dark
+        );
+      }
+
+      &-3 {
+        background-image: linear-gradient(
+          to right bottom,
+          $winter-gre-light,
+          $winter-gre-dark
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  //   FRONT CARD STYLES
+  &__photo {
+    background-size: cover;
+    height: 20rem;
+    background-blend-mode: screen;
+    background-position: bottom;
+    border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          $deep-sea-gre-light,
+          $deep-sea-gre-dark
+        ),
+        url(../Image/card-1.jpg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          $pancho-gre-light,
+          $pancho-gre-dark
+        ),
+        url(../Image/card-2.jpg);
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          $winter-gre-light,
+          $winter-gre-dark
+        ),
+        url(../Image/card-3.jpg);
+    }
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    color: $color-white;
+    font-size: 2.4rem;
+    font-weight: 300;
+    text-align: left;
+    width: 81%;
+    position: absolute;
+    top: 18.5rem;
+    left: 1.6rem;
+    transform: skewY(-4deg);
+  }
+  &__heading-span {
+    padding: 0.8rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    border-radius: 2px;
+    &--1 {
+      background-image: linear-gradient(
+        to bottom,
+        $deep-sea-gre-light,
+        $deep-sea-gre-dark
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to bottom,
+        $pancho-gre-light,
+        $pancho-gre-dark
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to bottom,
+        $winter-gre-light,
+        $winter-gre-dark
+      );
+    }
+  }
+
+  &__details {
+    ul {
+      list-style: none;
+      width: 65%;
+      margin: 8rem auto 0;
+
+      li {
+        font-size: 1.45rem;
+        text-align: center;
+        padding: 0.8rem;
+        color: $color-grey-dark;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $light-grey-2;
+        }
+      }
+    }
+  }
+
+  //   BACK CARD STYLES
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 85%;
+    padding: 0 auto;
+  }
+
+  &__price-box {
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  &__price-value {
+    font-size: 5rem;
+    font-weight: 300;
+  }
+}

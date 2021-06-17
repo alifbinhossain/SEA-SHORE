@@ -1,0 +1,60 @@
+.section-about {
+  background-color: $light-grey;
+  padding: 10rem 12rem 18rem;
+  clip-path: polygon(2% 0, 98% 0, 100% 98%, 0 98%);
+}
+
+.section-features {
+  margin-top: -3rem;
+  padding: 8rem 14rem 15rem;
+  background-image: linear-gradient(
+      to right bottom,
+      rgb($primary-color-blue, 0.8),
+      rgb($secondary-color-skyblue-light, 0.8)
+    ),
+    url(../Image/feature-page.jpg);
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+  background-position: center;
+}
+
+.section-tours {
+  background-color: $light-grey;
+  padding: 8rem 12rem 18rem;
+  clip-path: polygon(2% 0, 98% 0, 100% 92%, 0 92%);
+}
+
+.section-stories {
+  margin-top: -9rem;
+  padding: 12rem 0;
+  position: relative;
+}
+
+.section-book {
+  padding: 10rem 10rem;
+  background-image: linear-gradient(
+    to right bottom,
+    $primary-color-blue,
+    $secondary-color-skyblue-dark,
+    $secondary-color-skyblue
+  );
+}
+
+.book {
+  background-image: linear-gradient(
+      100deg,
+      rgba($color-white, 0.75) 0%,
+      rgba($color-white, 0.75) 50%,
+      transparent 50%
+    ),
+    url(../Image/book.jpg);
+  background-size: 100%;
+  background-position: top center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+}
+
+.book__form {
+  width: 50%;
+  padding: 5.8rem;
+}
