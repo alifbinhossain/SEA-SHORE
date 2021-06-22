@@ -5,3 +5,52 @@
     clear: both;
   }
 }
+
+
+/* ALL SCREEN SIZES
+0-600px  mobile 
+900px    tab-port
+1200px   tab-land
+1800+px  big-screen 
+
+// BREAKPOINT ARGUEMENTS
+mob 
+tab-port 
+tab-land 
+big-screen 
+
+*/
+
+@mixin respond($breakpoint){
+
+  @if $breakpoint == big-screen{
+    @media (min-width :1800px){
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land{
+    @media (max-width :1200px){
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port{
+    @media (max-width :900px){
+      @content;
+    }
+  }
+
+  @if $breakpoint == mob {
+    @media (max-width :600px){
+      @content;
+    }
+  }
+
+ 
+
+ 
+
+  
+
+}

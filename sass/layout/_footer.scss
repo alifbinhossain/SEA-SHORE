@@ -1,4 +1,5 @@
 .footer {
+  margin: 6rem -3rem -3rem -3rem;
   padding: 8rem 2rem;
   font-size: $default-font-size;
   background-image: linear-gradient(
@@ -9,16 +10,37 @@
   );
   color: $light-grey-2;
 
+  @include respond(tab-port){
+    padding: 6rem 2rem;
+    text-align: center;
+    margin: 0;
+    
+  }
+
+  // &__response-row{
+  //   @include respond(tab-port){
+  //     margin: 0 !important;
+  //   }
+  // }
+
   &__header {
     font-size: 1.6rem;
     font-weight: 600;
     text-transform: uppercase;
     color: $color-white;
     padding: 6px;
+
+    @include respond(tab-port){
+      font-size:1.4rem;
+    }
   }
 
   &__list {
     list-style: none;
+
+    @include respond(tab-port){
+      margin-bottom: 1rem;
+    }
   }
 
   &__item {
@@ -36,6 +58,11 @@
       backface-visibility: hidden;
       padding: 6px;
       border: none;
+
+      @include respond(tab-port){
+        line-height: 0.5;
+        font-size: 1.3rem;
+      }
     }
 
     &:active,
@@ -64,6 +91,11 @@
       box-shadow: 0 1rem 6rem rgba($color-white, 0.1);
       cursor: pointer;
     }
+
+    @include respond(tab-port){
+      margin-left: 2rem;
+      margin-top: 0;
+    }
   }
 
   &__line {
@@ -76,5 +108,9 @@
 
   &__copyright {
     text-align: center;
+
+    @include respond(tab-port){
+      font-size: 1.2rem;
+    }
   }
 }

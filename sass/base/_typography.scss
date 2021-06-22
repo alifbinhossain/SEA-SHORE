@@ -10,6 +10,11 @@
   backface-visibility: hidden;
   margin-bottom: 4rem;
 
+  @include respond(tab-port){
+    height: 12rem;
+  width: 50rem;
+  }
+
   &--main {
     display: block;
     font-size: 6rem;
@@ -17,6 +22,11 @@
     letter-spacing: 3rem;
     margin-left: 2.5rem;
     animation: moveInRight 1s ease-out 1s;
+
+    @include respond(tab-port){
+      font-size: 5rem;
+      letter-spacing: 2rem;
+    }
   }
   &--sub {
     display: block;
@@ -24,6 +34,12 @@
     font-weight: 600;
     letter-spacing: 0.7rem;
     animation: moveInLeft 1s ease-out 1s;
+
+    @include respond(tab-port){
+      font-size: 1.5rem;
+      letter-spacing: .54rem;
+    }
+    
   }
 }
 
@@ -47,6 +63,11 @@
     -webkit-background-clip: text;
     color: transparent;
   }
+
+  @include respond(tab-port){
+    font-size: 3rem;
+    letter-spacing: 0;
+  }
 }
 
 .heading-tertiary {
@@ -55,6 +76,10 @@
   text-transform: uppercase;
   font-size: $default-font-size;
   font-weight: 700;
+
+  @include respond(tab-port){
+    font-size: 1.4rem;
+  }
 }
 
 .paragraph {

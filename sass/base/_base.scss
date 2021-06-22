@@ -7,6 +7,24 @@
 }
 html {
   font-size: 62.5%;
+  
+  @include respond(big-screen){
+    font-size: 75%;
+  }
+
+  
+@include respond(tab-land){
+  font-size: 56.25%;
+}
+
+@include respond(tab-port){
+  font-size: 50%;
+}
+
+@include respond(mob){
+     font-size: 45%;
+ }
+ 
 }
 
 body {
@@ -17,4 +35,8 @@ body {
   color: $color-grey-dark;
   box-sizing: border-box;
   padding: 3rem;
+
+  @include respond(mob){
+    padding: 0;
+  }
 }

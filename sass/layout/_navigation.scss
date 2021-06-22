@@ -17,6 +17,13 @@
     cursor: pointer;
     animation: moveInLeft 1s ease 0.8s;
     animation-fill-mode: backwards;
+
+    @include respond(mob) {
+      height: 6rem;
+      width: 6rem;
+    top: 4rem;
+    right: 4.5rem;
+    }
   }
 
   &__background {
@@ -34,6 +41,13 @@
     transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
     animation: moveInLeft 0.00000000000000001s ease 2s;
     animation-fill-mode: backwards;
+
+    @include respond(mob) {
+      height: 5rem;
+      width: 5rem;
+      top: 4.5rem;
+    right: 5rem;
+    }
   }
 
   &__nav {
@@ -107,6 +121,10 @@
     position: relative;
     top: 3.5rem;
     left: 0;
+
+    @include respond(mob){
+      top: 3rem;
+    }
     &,
     &::before,
     &::after {
@@ -114,6 +132,10 @@
       height: 3px;
       background-color: $primary-color-blue;
       display: inline-block;
+
+      @include respond(mob){
+        width: 2.8rem;
+      }
     }
 
     &::before,

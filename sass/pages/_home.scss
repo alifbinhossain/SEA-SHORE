@@ -2,6 +2,14 @@
   background-color: $light-grey;
   padding: 10rem 12rem 18rem;
   clip-path: polygon(2% 0, 98% 0, 100% 98%, 0 98%);
+
+  @include respond(tab-port) {
+    padding: 6rem 6rem;
+  }
+
+  @include respond(mob) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 .section-features {
@@ -16,18 +24,39 @@
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
   background-position: center;
+
+  @include respond(tab-port) {
+    padding: 8rem 6rem;
+  }
+
+  @include respond(mob) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 .section-tours {
   background-color: $light-grey;
   padding: 8rem 12rem 18rem;
   clip-path: polygon(2% 0, 98% 0, 100% 92%, 0 92%);
+
+  @include respond(tab-port) {
+    padding: 6rem 10rem;
+  }
+
+  @include respond(mob) {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
 
 .section-stories {
   margin-top: -9rem;
   padding: 12rem 0;
   position: relative;
+
+  @include respond(tab-port) {
+    margin-top: 0;
+    padding: 6rem 8rem;
+  }
 }
 
 .section-book {
@@ -38,6 +67,10 @@
     $secondary-color-skyblue-dark,
     $secondary-color-skyblue
   );
+
+  @include respond(tab-port) {
+    padding: 8rem;
+  }
 }
 
 .book {
@@ -52,9 +85,24 @@
   background-position: top center;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.65) 0%,
+        rgba($color-white, 0.85) 100%
+      ),
+      url(../Image/book.jpg);
+
+    background-size: cover;
+  }
 }
 
 .book__form {
   width: 50%;
   padding: 5.8rem;
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
 }
